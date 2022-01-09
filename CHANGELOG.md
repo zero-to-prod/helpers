@@ -2,6 +2,12 @@
 
 All notable changes to `laravel-helpers` will be documented in this file.
 
+## 1.4.0 - 2022-01-09
+
+### Added
+
+- array_to_string_in_quotes()
+
 ## 1.3.1 - 2022-01-09
 
 ### Fixed
