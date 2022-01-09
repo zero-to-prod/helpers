@@ -106,3 +106,51 @@ if (! function_exists('unslug_title')) {
         return $title_case ? Str::title(unslug($slug, $separator)) : ucfirst(unslug($slug));
     }
 }
+
+if (! function_exists('remove_trailing_character')) {
+    /**
+     * Removes a trailing character.
+     */
+    function remove_trailing_character(string $string, string $character = ' '): string
+    {
+        if (strrev($string)[0] === $character) {
+            return substr($string, 0, -1);
+        }
+
+        return $string;
+    }
+}
+
+if (! function_exists('remove_trailing_slash')) {
+    /**
+     * Removes a trailing slash.
+     */
+    function remove_trailing_slash(string $string): string
+    {
+        return remove_trailing_character($string, '/');
+    }
+}
+
+if (! function_exists('guarantee_trailing_character')) {
+    /**
+     * Adds a trailing character.
+     */
+    function guarantee_trailing_character(string $string, string $character = ' '): string
+    {
+        if (strrev($string)[0] !== $character) {
+            return $string.$character;
+        }
+
+        return $string;
+    }
+}
+
+if (! function_exists('guarantee_trailing_slash')) {
+    /**
+     * Flashes a message to the session.
+     */
+    function guarantee_trailing_slash(string $string): string
+    {
+        return guarantee_trailing_character($string, '/');
+    }
+}
