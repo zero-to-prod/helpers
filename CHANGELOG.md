@@ -2,6 +2,12 @@
 
 All notable changes to `laravel-helpers` will be documented in this file.
 
+## 1.3.1 - 2022-01-09
+
+### Fixed
+
+- Added helpers.php to autoload in composer.json.
+
 ## 1.3.0 - 2022-01-09
 
 ### Added

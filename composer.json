@@ -32,15 +32,15 @@
         "psr-4": {
             "ZeroToProd\\LaravelHelpers\\": "src",
             "ZeroToProd\\LaravelHelpers\\Database\\Factories\\": "database/factories"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "ZeroToProd\\LaravelHelpers\\Tests\\": "tests"
         },
         "files": [
             "src/helpers.php"
         ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ZeroToProd\\LaravelHelpers\\Tests\\": "tests"
+        }
     },
     "scripts": {
         "analyse": "vendor/bin/phpstan analyse",
