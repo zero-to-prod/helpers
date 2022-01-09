@@ -4,25 +4,17 @@ use Carbon\Carbon;
 
 if (! function_exists('days_left_in_month')) {
     /**
-     * @see DaysLeftInMonthTest::days_left_in_month()
+     * Returns the number of days left in a given month
      */
-    function days_left_in_month(?DateTime $date = null): int
+    function days_left_in_month(DateTime $date = new DateTime(), DateTime $month = new DateTime('last day of this month')): int
     {
-        if ($date === null) {
-            $date = new DateTime();
-        }
-
-        $lastDayOfThisMonth = new DateTime('last day of this month');
-
-        return (int) $lastDayOfThisMonth->diff($date)->format('%a days');
+        return (int) $month->diff($date)->format('%a days');
     }
 }
 
 if (! function_exists('diff_for_humans')) {
     /**
      * A wrapper for Carbon diffForHumans().
-     *
-     * @see DiffForHumansTest::diff_for_humans()
      */
     function diff_for_humans(DateTimeInterface|string|null $time): string
     {
