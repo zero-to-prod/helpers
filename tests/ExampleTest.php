@@ -1,5 +1,8 @@
 <?php
 
+use Illuminate\Support\Carbon;
+
 it('can test', function () {
-    expect(true)->toBeTrue();
+    $carbon = now();
+    expect(diff_for_humans($carbon))->toBe(Carbon::parse($carbon)->diffForHumans());
 });
