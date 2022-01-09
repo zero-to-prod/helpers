@@ -2,6 +2,12 @@
 
 All notable changes to `laravel-helpers` will be documented in this file.
 
+## 1.2.0 - 2022-01-09
+
+### Added
+
+- random_bool()
+
 ## 1.1.1 - 2022-01-09
 
 ### Updated
