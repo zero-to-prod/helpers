@@ -2,6 +2,18 @@
 
 use Carbon\Carbon;
 
+if (! function_exists('array_to_string_in_quotes')) {
+    /**
+     * @see ArrayToStringWithQuotesTest::array_to_string_with_quotes()
+     */
+    function array_to_string_in_quotes(array $array, bool $double_quotes = false): string
+    {
+        $collection = collect($array);
+
+        return $double_quotes ? '"'.$collection->join('", "', '", "').'"' : "'".$collection->join("', '", "', '")."'";
+    }
+}
+
 if (! function_exists('days_left_in_month')) {
     /**
      * Returns the number of days left in a given month
