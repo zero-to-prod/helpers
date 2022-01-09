@@ -2,6 +2,15 @@
 
 All notable changes to `laravel-helpers` will be documented in this file.
 
+## 1.9.0 - 2022-01-09
+
+Add trailing character functions
+
+- `remove_trailing_character()`
+- `remove_trailing_slash()`
+- `guarantee_trailing_character()`
+- `guarantee_trailing_slash()`
+
 ## 1.8.0 - 2022-01-09
 
 ### Added
