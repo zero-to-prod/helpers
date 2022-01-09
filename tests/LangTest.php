@@ -2,11 +2,11 @@
 
 use Illuminate\Support\Facades\Config;
 
-it('returns the app lang', function () {
+it('returns the app locale', function () {
     expect(locale())->toBe('en');
 });
 
-it('returns the app lang when es', function () {
+it('returns the app locale when es', function () {
     Config::set('app.locale', 'es');
     expect(locale())->toBe('es');
 });
