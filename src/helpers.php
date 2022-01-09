@@ -46,6 +46,16 @@ if (! function_exists('diff_for_humans')) {
     }
 }
 
+if (! function_exists('get_item')) {
+    /**
+     * Returns the value of an item by key.
+     */
+    function get_item($items = null, string $key = 'id', $default = null): mixed
+    {
+        return collect($items)->get($key, $default);
+    }
+}
+
 if (! function_exists('locale')) {
     /**
      * Gets the local of the app
