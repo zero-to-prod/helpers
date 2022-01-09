@@ -12,6 +12,16 @@ if (! function_exists('days_left_in_month')) {
     }
 }
 
+if (! function_exists('days_left_in_this_month')) {
+    /**
+     * Returns the number of days left in this month
+     */
+    function days_left_in_this_month(): int
+    {
+        return days_left_in_month(new DateTime(), new DateTime('last day of this month'));
+    }
+}
+
 if (! function_exists('diff_for_humans')) {
     /**
      * A wrapper for Carbon diffForHumans().

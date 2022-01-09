@@ -2,6 +2,13 @@
 
 All notable changes to `laravel-helpers` will be documented in this file.
 
+## 1.3.0 - 2022-01-09
+
+### Added
+
+- days_left_in_month()
+- days_left_in_this_month()
+
 ## 1.2.0 - 2022-01-09
 
 ### Added
