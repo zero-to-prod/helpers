@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-helpers` will be documented in this file.
 
+## 1.7.1 - 2022-01-09
+
+### Fixed
+
+- Typecast array in `get_item()`.
+
+## 1.6.0 - 2022-01-09
+
 ## 1.7.0 - 2022-01-09
 
 ### Added

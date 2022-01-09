@@ -52,7 +52,7 @@ if (! function_exists('get_item')) {
      */
     function get_item($items = null, string $key = 'id', $default = null): mixed
     {
-        return collect($items)->get($key, $default);
+        return collect((array)$items)->get($key, $default);
     }
 }
 
