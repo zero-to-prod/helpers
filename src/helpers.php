@@ -1,6 +1,7 @@
 <?php
 
 use Carbon\Carbon;
+use Illuminate\Support\Str;
 
 if (! function_exists('array_to_string_in_quotes')) {
     /**
@@ -52,7 +53,7 @@ if (! function_exists('get_item')) {
      */
     function get_item($items = null, string $key = 'id', $default = null): mixed
     {
-        return collect((array)$items)->get($key, $default);
+        return collect((array) $items)->get($key, $default);
     }
 }
 
@@ -73,5 +74,35 @@ if (! function_exists('random_bool')) {
     function random_bool(): bool
     {
         return random_int(0, 1) === 1;
+    }
+}
+
+if (! function_exists('slug')) {
+    /**
+     * Generate a URL friendly "slug" from a given string.
+     */
+    function slug(string $title, string $separator = '_', string $language = 'en'): string
+    {
+        return Str::slug($title, $separator, $language);
+    }
+}
+
+if (! function_exists('unslug')) {
+    /**
+     * Removes slug separator.
+     */
+    function unslug(string $slug, string $separator = '_'): string
+    {
+        return str_replace($separator, ' ', $slug);
+    }
+}
+
+if (! function_exists('unslug_title')) {
+    /**
+     * Removes slug separator and sets string to title case.
+     */
+    function unslug_title(string $slug, string $separator = '_', bool $title_case = false): string
+    {
+        return $title_case ? Str::title(unslug($slug, $separator)) : ucfirst(unslug($slug));
     }
 }
