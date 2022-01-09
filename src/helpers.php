@@ -4,7 +4,9 @@ use Carbon\Carbon;
 
 if (! function_exists('array_to_string_in_quotes')) {
     /**
-     * @see ArrayToStringWithQuotesTest::array_to_string_with_quotes()
+     * Turns an array to list of quoted strings
+     *
+     * example: ['1', '2'] returns '1', '2'
      */
     function array_to_string_in_quotes(array $array, bool $double_quotes = false): string
     {
