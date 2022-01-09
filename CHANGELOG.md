@@ -2,6 +2,12 @@
 
 All notable changes to `laravel-helpers` will be documented in this file.
 
+## 1.6.0 - 2022-01-09
+
+### Added
+
+- UrlHelper::class
+
 ## 1.5.0 - 2022-01-09
 
 ### Added
