@@ -46,6 +46,16 @@ if (! function_exists('diff_for_humans')) {
     }
 }
 
+if (! function_exists('locale')) {
+    /**
+     * Gets the local of the app
+     */
+    function locale(): string
+    {
+        return str_replace('_', '-', app()->getLocale());
+    }
+}
+
 if (! function_exists('random_bool')) {
     /**
      * Returns a random boolean.
