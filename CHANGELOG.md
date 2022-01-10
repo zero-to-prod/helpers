@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-helpers` will be documented in this file.
 
+## 1.10.0 - 2022-01-10
+
+Add `AttributeCast::class`
+
 ## 1.9.0 - 2022-01-09
 
 Add trailing character functions
